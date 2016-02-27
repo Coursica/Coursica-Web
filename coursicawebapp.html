@@ -1,0 +1,169 @@
+<!-- <head>
+  <title>coursicawebapp</title>
+</head>
+
+<body>
+
+{{#if isRight}
+  {{> login}}
+{{else}}
+  {{> hello}}
+}
+}
+</body> -->
+<head>
+  <title>Coursica</title>
+</head>
+
+<!-- <template name="layout">
+  
+  	{{#if loginStatus}}
+  		
+  	{{else}}
+  		{{> login}}
+  	{{/if}}
+  	{{> main}}
+
+</template> -->
+
+<!-- <template name="login">
+<form id="login-form" action="action">
+      <div>
+        <input type="email" id="login-email" />
+        <input type="password" id="login-password" />
+        <input type="submit" id="login-button" value="Sign in" />
+     </div>
+   </form> 
+</template> -->
+
+
+<template name="login">
+    <div id="logincontainer" class="container">
+      <div id="login" class="container">
+          <form id="login-form" action="action">
+            <h2 id="coursicaheading" align="center" class="form-signin-heading">Coursica</h2>
+            <label class="sr-only">HUID</label>
+            <input id="login-email" type="text" class="form-control" placeholder="HUID" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input id="login-password" type="password" class="form-control" placeholder="Password" required>
+            <button id="login-button" class="btn btn-lg btn-primary btn-block" value="Sign in" type="submit">Login</button>
+          </form>
+      </div> <!-- /container -->
+      <footer>
+      <p class="pull-right">©2014 Prestige Worldwide</p>
+    </footer>
+    </div>
+    
+  </template>
+
+<template name="nav">
+  
+</template>
+
+<template name="main">
+  <header>
+    <title>Coursica</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+    <nav class="navbar navbar-default" role="navigation" style="background:#1f94ff;">
+    <div class="container-fluid">
+      <a id="coursicaleft" class="navbar-brand" href="{{ pathFor 'main' }}">Coursica</a>        
+      <div class="container-fluid">
+
+        <ul class="nav navbar-nav pull-right">
+          <a id="logoutright" class="navbar-brand" href="{{ pathFor 'login' }}">Logout</a> 
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  </header>
+
+  <body>
+    <div id='maindiv'>
+		  <div class ='filtersdiv'>
+
+          <div>
+          {{> reactiveTableFilter id="myFilter" label="Search" }}
+          </div>
+         
+         <div id='semesterButtonsDiv' class = "btn-group">
+            <button id="fallButton" type = "button" class = "btn btn-primary">Fall</button>
+            <button id="springButton" type = "button" class = "btn btn-primary">Spring</button>
+            <button id="bothButton" type = "button" class = "btn btn-primary">Both</button>
+         </div>
+         
+         <div id='courseLevelDiv' class = "btn-group">
+            <button type = "button" class = "btn btn-primary">Undergrad</button>
+            <button type = "button" class = "btn btn-primary">Graduate</button>
+            <button type = "button" class = "btn btn-primary">Both</button>
+         </div>
+
+         <div id='firstGenEdDiv' class = "btn-group-vertical">
+            <button type = "button" class = "btn btn-primary">A&IU</button>
+            <button type = "button" class = "btn btn-primary">SLS</button>
+         </div>
+         <div id='secondGenEdDiv' class = "btn-group-vertical">
+            <button type = "button" class = "btn btn-primary">CB</button>
+            <button type = "button" class = "btn btn-primary">SPU</button>
+         </div>
+         <div id='thirdGenEdDiv' class = "btn-group-vertical">
+            <button type = "button" class = "btn btn-primary">E&MR</button>
+            <button type = "button" class = "btn btn-primary">SOW</button>
+         </div>
+         <div id='fourthGenEdDiv' class = "btn-group-vertical">
+            <button type = "button" class = "btn btn-primary">ER</button>
+            <button type = "button" class = "btn btn-primary">USW</button>
+         </div>
+         <br/><br/>
+         <p style="text-align:left;">
+          {{overall_slider.[0]}}
+          <span style="float:middle;">Q Overall</span>
+          <span style="float:right;">{{overall_slider.[1]}}</span>
+          </p>
+         <div id="overall_slider"></div>
+         <br/>
+         <p style="text-align:left;">
+          {{workload_slider.[0]}}
+          <span style="float:middle;">Workload</span>
+          <span style="float:right;">{{workload_slider.[1]}}</span>
+          </p>
+         <div id="workload_slider"></div>
+         <br/>
+         <p style="text-align:left;">
+          {{enrollment_slider.[0]}}
+          <span style="float:middle;">Enrollment</span>
+          <span style="float:right;">{{enrollment_slider.[1]}}</span>
+          </p>
+         <div id="enrollment_slider"></div>
+         <div>
+         {{> checkboxFilter}}
+         </div>
+
+		  </div>
+		<div class ='coursesdiv'>
+			{{> reactiveTable settings=settings}}
+
+		</div>
+	</div>
+  </body>
+</template>
+
+<template name="checkboxFilter">
+    <div class="input-group">
+      <span class="input-group-addon">
+        <span>Show Checked Only</span>
+      </span>
+      <span class="form-control">
+        <input class="checkbox-filter" type="checkbox" {{checked}}/>
+      </span>
+    </div>
+</template>
+
+<template name="register">
+    <h2>Register</h2>
+</template>
+
+<template name="logon">
+    <h2>Login</h2>
+</template>

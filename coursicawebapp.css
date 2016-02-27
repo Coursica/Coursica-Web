@@ -1,0 +1,160 @@
+/* CSS declarations go here */
+
+
+/* LOGIN */
+
+
+
+
+html,body
+{
+    height:100%;
+    width:100%;
+}
+
+
+#coursicaheading {
+    color: #ffffff;
+    padding-bottom: 40px;
+    font-weight: medium;
+    font-family: 'AvenirNext-DemiBold';
+    font-size: 400%;
+}
+
+#login {
+    padding-top: 80px;
+    width: 380px;   
+}
+
+#logincontainer {
+    height:100%;
+    width:100%;
+    background-image: url('http://ivyleaguelifestyle.com/wp-content/uploads/2015/03/harvard-yard.jpg');
+    background-repeat:no-repeat;
+    font: 13px/18px "Avenir Next", Helvetica, Arial, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#loginButton {
+    height: 20px;
+    background-color: #1f94ff;
+    margin-top: 20px;
+
+}
+
+.sr-only {
+
+}
+
+.home {
+    background: #000000;
+}
+
+
+/* NAV */
+
+#coursicaleft {
+    color: #ffffff;
+    font-weight: medium;
+    font-family: 'AvenirNext-DemiBold';
+}
+
+#logoutright {
+    color: #ffffff;
+    font-weight: small;
+    font-family: 'AvenirNext-DemiBold';
+}
+
+
+
+/* MAIN */
+
+#maindiv{
+    width:100%;
+    height:100%;
+    border:1px solid red;
+    margin-right:10px;
+    float:left;
+    background-color: #c0c0c0;
+}
+
+.filtersdiv{
+    float:left;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 24%;
+    height:100%;
+    border:1px solid green;
+    background-color: #ffffff;
+}
+
+.coursesdiv{
+    float: right;
+    width: 76%;
+    border:1px solid blue;
+    padding-left: 10px;
+    padding-right: 10px; 
+    background-color: #ffffff;   
+}
+
+/* FILTERS */
+
+/* BUTTON SELECTION */
+
+.btn-danger-text {
+  color: #bd362f;
+}
+
+.btn-danger-text:hover,
+.btn-danger-text:active,
+.btn-danger-text.active,
+.btn-danger-text.disabled,
+.btn-danger-text[disabled] {
+  color: #bd362f;
+  *color: #a9302a;
+}
+
+.btn-danger-text:active,
+.btn-danger-text.active {
+  color: #942a25 \9;
+}
+
+.btn-selected{
+     background-color: green;
+}
+
+#semesterButtonsDiv {
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+}
+
+#courseLevelDiv {
+    margin-left: 10%;
+    margin-right: 0%;
+    margin-top: 20px;
+}
+
+#firstGenEdDiv {
+    margin-left: 10%;
+    margin-top: 20px;
+}
+
+#secondGenEdDiv {
+    margin-left: -10px;
+    margin-top: 20px;
+}
+#thirdGenEdDiv {
+    margin-left: -10px;
+    margin-top: 20px;
+}
+#fourthGenEdDiv {
+    margin-left: -10px;
+    margin-top: 20px;
+}
+
+
+
